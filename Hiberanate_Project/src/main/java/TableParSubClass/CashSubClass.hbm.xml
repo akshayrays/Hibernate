@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 Jun, 2022 4:30:46 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <joined-subclass name="TableParSubClass.CashSubClass" extends="TableParSubClass.PaymentSubclass" table="CASHSUBCLASS" lazy="false">
+        <key>
+            <column name="PAYMENTID" />
+        </key>
+        <property name="paymentId" type="long" insert="false" update="false">
+            <column name="PAYMENTID" />
+        </property>
+    </joined-subclass>
+</hibernate-mapping>

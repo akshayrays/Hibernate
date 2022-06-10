@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 Jun, 2022 3:43:43 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="NamedQueries.UserPOJO" table="USERPOJO">
+		<id name="id" type="int">
+			<column name="ID" />
+			<generator class="increment" />
+		</id>
+		<property name="fName" type="java.lang.String" access="field">
+			<column name="FNAME" />
+		</property>
+		<property name="Lname" type="java.lang.String">
+			<column name="LNAME" />
+		</property>
+		<property name="userId" type="java.lang.String">
+			<column name="USERID" />
+		</property>
+		<property name="password" type="java.lang.String">
+			<column name="PASSWORD" />
+		</property>
+	</class>
+	<!-- <Named Query> -->
+	<query name="allUser">
+   <![CDATA[ from UserPOJO ]]>
+	</query>
+</hibernate-mapping>
